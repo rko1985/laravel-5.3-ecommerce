@@ -51,6 +51,11 @@ Route::get('/cart/rapid/add/{id}', [
     'as' => 'cart.rapid.add'
 ]);
 
+Route::get('/cart/checkout', [
+    'uses' => 'CheckoutController@index',
+    'as' => 'cart.checkout'
+]);
+
 Route::resource('products', 'ProductsController');
 
 Auth::routes();
